@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+ 
+    <!-- <record id="report_cucihelm_pemesanan" model="ir.actions.report">
+        <field name="name">Order Report</field>
+        <field name="model">cuci_helm.pemesanan</field>
+        <field name="report_type">qweb-pdf</field>
+        <field name="report_name">cuci_helm.report_cucihelm_pemesanan_id</field>
+        <field name="report_file">cuci_helm.report_cucihelm_pemesanan_id</field>
+        <field name="binding_model_id" ref="model_cucihelm_pemesanan"/>
+        <field name="binding_type">report</field>
+    </record> -->
+ 
+</odoo>
+
+

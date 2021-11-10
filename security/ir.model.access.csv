@@ -1,0 +1,5 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_cuci_helm_jeniscucihelm,access.cuci_helm.jeniscucihelm,model_cuci_helm_jeniscucihelm,,1,1,1,1
+access_cuci_helm_jeniscuci,access.cuci_helm.jeniscuci,model_cuci_helm_jeniscuci,,1,1,1,1
+access_cuci_helm_pemesesan,access.cuci_helm.pemesanan,model_cuci_helm_pemesanan,,1,1,1,1
+access_cuci_helm_detailpesanan,access.cuci_helm.detailpesanan,model_cuci_helm_detailpesanan,,1,1,1,1

@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+  <data>
+    <record id="cucihelm_jeniscucihelm_tree" model="ir.ui.view">
+      <field name="name">cuci_helm.jeniscucihelm.view.tree</field>
+      <field name="model">cuci_helm.jeniscucihelm</field>
+      <field name="arch" type="xml">
+          <tree string="Product Tree">
+            <field name="name" />
+            <field name="ukuran" />
+            <field name="tipe" />
+            <field name="jenis_id" />
+            <field name="air" />
+            <field name="harga" />
+            <field name="active" />
+          </tree>
+      </field>
+    </record>
+ 
+    <record id="cucihelm_jeniscucihelm_action" model="ir.actions.act_window">
+      <field name="name">cuci_helm.jeniscucihelm.action</field>
+      <field name="res_model">cuci_helm.jeniscucihelm</field>
+      <field name="type">ir.actions.act_window</field>
+      <field name="view_mode">tree,form</field>
+      <field name="help" type="html">
+        <p class="o_view_nocontent_smiling_face">
+            Bahan cucian
+        </p>
+      </field>
+    </record>
+ 
+    <record id="cucihelm_jeniscucihelm_view_form" model="ir.ui.view">
+      <field name="name">cuci_helm.jeniscucihelm.view.form</field>
+      <field name="model">cuci_helm.jeniscucihelm</field>
+      <field name="arch" type="xml">
+          <form>
+            <sheet>
+            <group>
+              <!-- Add your group fields here -->
+              <group colspan='4'>
+                <group colspan='2'>
+                  <separator string='JENIS PENCUCIAN'/>
+                    <field name="name" />
+                    <field name="ukuran" />
+                </group>
+                <group colspan='2'>
+                  <separator string='JENIS HELM'/>
+                    <field name="tipe" /> 
+                </group>
+                <notebook>
+                  <page string="HARGA">
+                    <field name="harga" />
+                  </page>
+                  <page string="Deskripsi jenis Cuci">
+                    <field name="jenis_id" />
+                    <field name="deskripsi" />
+                  </page>
+                </notebook>
+              </group>
+            </group>
+          </sheet>
+        </form>
+      </field>
+    </record>
+
+    <record id="cucihelm_jeniscucihelm_view_search" model="ir.ui.view">
+      <field name="name">cuci_helm.jeniscucihelm.view.search</field>
+      <field name="model">cuci_helm.jeniscucihelm</field>
+      <field name="arch" type="xml">
+        <search string="Pencarian">
+          <field name="name" />
+          <field name="tipe" />
+          <filter name="standart" string="Standart" domain="[('tipe', 'ilike', 'standart')]"/>
+          <filter name="full face" string="Full Face" domain="[('tipe', 'ilike', 'full face')]"/>
+          <filter name="bogo" string="Bogo" domain="[('tipe', 'ilike', 'bogo')]"/>
+          <filter name="mips" string="MIPS" domain="[('tipe', 'ilike', 'mips')]"/>
+          <filter name="off road" string="Off Road" domain="[('tipe', 'ilike', 'off road')]"/>
+        </search>
+      </field>
+    </record>
+
+
+    <menuitem
+      id="cucihelm_bahancucian_menu_act"
+      name="Jenis Helm"
+      parent="cucihelm_datamaster_menu_categ"
+      action="cucihelm_jeniscucihelm_action" sequence="1" />
+  </data>
+</odoo>

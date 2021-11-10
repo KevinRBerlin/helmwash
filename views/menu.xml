@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+    
+        <menuitem id="cucihelm_menu_root" name="Cuci Helm" sequence="10"/>
+        <menuitem id="cucihelm_datamaster_menu_categ" name="Data Pencucian" parent='cucihelm_menu_root' sequence="10"/>
+        <menuitem id="cucihelm_pemesanan_menu_categ" name="Operasional" 
+        parent='cucihelm_menu_root' sequence="10"/>
+    </data>
+</odoo>

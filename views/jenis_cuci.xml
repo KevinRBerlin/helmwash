@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+  <data>
+    <record id="cucihelm_jeniscuci_tree" model="ir.ui.view">
+      <field name="name">cuci_helm.jeniscuci.view.tree</field>
+      <field name="model">cuci_helm.jeniscuci</field>
+      <field name="arch" type="xml">
+          <tree string="Product Tree">
+            <field name="name" />
+            <field name="kotoran" />
+            <field name="air" />
+            <field name="tersedia" />
+            <field name="deskripsi" />
+          </tree>
+      </field>
+    </record>
+ 
+    <record id="cucihelm_jeniscuci_view_form" model="ir.ui.view">
+      <field name="name">cuci_helm.jeniscuci.view.form</field>
+      <field name="model">cuci_helm.jeniscuci</field>
+      <field name="arch" type="xml">
+        <form>
+          <sheet>
+            <group>
+              <group colspan='4'>
+                <group colspan='2'>
+                  <separator string='TEKNIK DAN JENIS HELM'/>
+                    <field name="name" />
+                    <field name="air" />
+                </group>
+                <group colspan='2'>
+                  <separator string='KOTORAN'/>
+                    <field name="kotoran" />
+                    <field name="tersedia" />
+                </group>
+                <notebook colspan='4'>
+                  <page string="DESKRIPSI PENCUCIAN">
+                    <field name="deskripsi" />
+                  </page>
+                  <page string="Jenis Helm">
+                    <field name="models_id" nolabel="1"/>
+                  </page>
+                </notebook>
+              </group>
+            </group>
+          </sheet>
+        </form>
+      </field>
+    </record>
+ 
+    <record id="cucihelm_jeniscuci_action" model="ir.actions.act_window">
+      <field name="name">cuci_helm.jeniscuci.action</field>
+      <field name="res_model">cuci_helm.jeniscuci</field>
+      <field name="type">ir.actions.act_window</field>
+      <field name="view_mode">tree,form</field>
+      <field name="help" type="html">
+        <p class="o_view_nocontent_smiling_face">
+            Diisi dengan daftar cara cuci
+        </p>
+      </field>
+    </record>
+ 
+    <menuitem
+      id="cucihelm_jeniscuci_menu_act"
+      name="Cara Cuci"
+      parent="cucihelm_datamaster_menu_categ"
+      action="cucihelm_jeniscuci_action" sequence="1" />
+  
+  </data>
+</odoo>
